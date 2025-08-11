@@ -1,23 +1,61 @@
-<!doctype html>
+<!-- index.html: Main page. Customize sections with your CV data. Add more interactivity via JS. -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nathan — CV</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nathan's Cyber CV</title>
+  <!-- Tailwind CDN for styling - customize classes as needed. For production, minify or use local. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css"> <!-- Custom CSS -->
+  <!-- Security: CSP to prevent XSS - customize nonce if using inline scripts. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
 </head>
-<body>
-  <header>
-    <h1>Nathan</h1>
-    <p>Cybersecurity Analyst — MSSP / Threat Intel</p>
+<body class="bg-black text-blue-300 font-mono">
+  <!-- Header: Glitch effect via JS. Customize name/title. -->
+  <header class="text-center py-10">
+    <h1 id="glitch" class="text-4xl glitch">Nathan - Cybersecurity Analyst & Transhumanist</h1>
   </header>
 
-  <main>
-    <section>
-      <h2>Contact</h2>
-      <p><a href="mailto:you@example.com">you@example.com</a></p>
-    </section>
-  </main>
+  <!-- Experience Section: Interactive timeline. Click to expand. Customize entries. -->
+  <section class="container mx-auto p-4">
+    <h2 class="text-2xl mb-4">Experience Timeline</h2>
+    <div class="timeline">
+      <!-- Add more items here. Format: date, title, desc. -->
+      <div class="timeline-item cursor-pointer" onclick="this.classList.toggle('expanded')">
+        <div class="lock-icon">🔒</div>
+        <p>2023-Present: Cybersecurity Analyst at MSSP (Chile)</p>
+        <div class="details hidden">Managed LogRhythm SIEM, Qualys/Tenable vuln tools, ZeroFox. Unified MSOC services.</div>
+      </div>
+      <!-- Example: Add your student experience. -->
+      <div class="timeline-item cursor-pointer" onclick="this.classList.toggle('expanded')">
+        <div class="lock-icon">🔒</div>
+        <p>2020-Present: Computer Science Student</p>
+        <div class="details hidden">Focus on transhumanism and dialectical materialism in tech evolution.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section: Simple radar-like list. Customize skills/progress. Use JS for animations if needed. -->
+  <section class="container mx-auto p-4">
+    <h2 class="text-2xl mb-4">Skills Radar</h2>
+    <ul>
+      <li>Threat Intelligence: 90% <div class="progress bg-blue-500" style="width:90%"></div></li>
+      <li>SIEM (LogRhythm): 85% <div class="progress bg-blue-500" style="width:85%"></div></li>
+      <!-- Add more: e.g., Vulnerability Management: 80% -->
+    </ul>
+  </section>
+
+  <!-- Contact Form: Submits to back-end. Customize fields. -->
+  <section class="container mx-auto p-4">
+    <h2 class="text-2xl mb-4">Secure Contact</h2>
+    <form id="contact-form" action="/submit" method="POST">
+      <input type="text" name="name" placeholder="Name" required class="bg-gray-800 text-white p-2 mb-2 w-full">
+      <input type="email" name="email" placeholder="Email" required class="bg-gray-800 text-white p-2 mb-2 w-full">
+      <textarea name="message" placeholder="Message" required class="bg-gray-800 text-white p-2 mb-2 w-full"></textarea>
+      <button type="submit" class="bg-blue-500 p-2">Send Encrypted</button>
+    </form>
+  </section>
 
   <script src="script.js"></script>
 </body>
