@@ -1,0 +1,127 @@
+{
+  "profile": {
+    "name": "Your Name",
+    "title": "Cybersecurity Analyst | SIEM Engineering | Threat Intelligence",
+    "summary": "Security analyst at an MSSP. SIEM management, detection engineering, and automation. Privacy-first. OSS advocate.",
+    "location": "Santiago, CL",
+    "email": "you@example.com",
+    "website": "https://example.com",
+    "pgp": "https://keys.openpgp.org/vks/v1/by-fingerprint/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "links": {
+      "github": "https://github.com/yourhandle",
+      "linkedin": "https://www.linkedin.com/in/yourhandle/"
+    }
+  },
+  "skills": {
+    "categories": [
+      {
+        "name": "SIEM",
+        "items": [
+          "LogRhythm 7.20",
+          "Google SecOps",
+          "Wazuh Cloud",
+          "Sigma",
+          "MITRE ATT&CK"
+        ]
+      },
+      {
+        "name": "Threat Intel",
+        "items": [
+          "MISP",
+          "ZeroFox",
+          "OSINT",
+          "YARA"
+        ]
+      },
+      {
+        "name": "Vuln Mgmt",
+        "items": [
+          "Qualys VMDR",
+          "Tenable.io",
+          "Tenable.sc"
+        ]
+      },
+      {
+        "name": "Automation",
+        "items": [
+          "Shuffle",
+          "Python",
+          "Bash",
+          "REST APIs"
+        ]
+      },
+      {
+        "name": "Infra",
+        "items": [
+          "Linux (Debian)",
+          "WEF",
+          "Nginx",
+          "Docker"
+        ]
+      }
+    ]
+  },
+  "experience": [
+    {
+      "org": "MSSP Name",
+      "role": "Intelligence Analyst / SIEM Engineer",
+      "start": "2023-05",
+      "end": null,
+      "summary": "Own SIEM tuning, detections, and platform integrations for multi-tenant environments.",
+      "highlights": [
+        "Cut false positives 45% via rule tuning and enrichment",
+        "Built Shuffle playbooks for ransomware containment and IOC takedown",
+        "Integrated Qualys/Tenable findings into detection pipeline"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Wazuh + Shuffle MDR Lab",
+      "description": "Reference pipeline for alert triage, containment, and ticket sync.",
+      "role": "Builder",
+      "year": 2025,
+      "url": "https://example.com/wazuh-shuffle",
+      "repo": "https://github.com/yourhandle/wazuh-shuffle",
+      "tags": [
+        "SIEM",
+        "SOAR",
+        "Automation"
+      ]
+    },
+    {
+      "title": "LogRhythm Parser Pack",
+      "description": "Custom MPE rules for DNSFilter and UniFi logs.",
+      "role": "Author",
+      "year": 2024,
+      "repo": "https://github.com/yourhandle/lr-mpe-rules",
+      "tags": [
+        "Parsing",
+        "Detection",
+        "LogRhythm"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "CompTIA Network+",
+      "issuer": "CompTIA",
+      "year": 2025
+    }
+  ],
+  "education": [
+    {
+      "school": "University Name",
+      "degree": "BSc Computer Science",
+      "year": "2026 (in progress)"
+    }
+  ],
+  "talks": [
+    {
+      "title": "Building a Lean MSSP SIEM",
+      "event": "Local Sec Meetup",
+      "year": 2025,
+      "url": "https://example.com/talk"
+    }
+  ]
+}
