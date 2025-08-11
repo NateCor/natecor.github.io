@@ -14,58 +14,18 @@
   },
   "skills": {
     "categories": [
-      {
-        "name": "SIEM",
-        "items": [
-          "LogRhythm 7.20",
-          "Google SecOps",
-          "Wazuh Cloud",
-          "Sigma",
-          "MITRE ATT&CK"
-        ]
-      },
-      {
-        "name": "Threat Intel",
-        "items": [
-          "MISP",
-          "ZeroFox",
-          "OSINT",
-          "YARA"
-        ]
-      },
-      {
-        "name": "Vuln Mgmt",
-        "items": [
-          "Qualys VMDR",
-          "Tenable.io",
-          "Tenable.sc"
-        ]
-      },
-      {
-        "name": "Automation",
-        "items": [
-          "Shuffle",
-          "Python",
-          "Bash",
-          "REST APIs"
-        ]
-      },
-      {
-        "name": "Infra",
-        "items": [
-          "Linux (Debian)",
-          "WEF",
-          "Nginx",
-          "Docker"
-        ]
-      }
+      { "name": "SIEM", "items": ["LogRhythm 7.20", "Google SecOps", "Wazuh Cloud", "Sigma", "MITRE ATT&CK"] },
+      { "name": "Threat Intel", "items": ["MISP", "ZeroFox", "OSINT", "YARA"] },
+      { "name": "Vuln Mgmt", "items": ["Qualys VMDR", "Tenable.io", "Tenable.sc"] },
+      { "name": "Automation", "items": ["Shuffle", "Python", "Bash", "REST APIs"] },
+      { "name": "Infra", "items": ["Linux (Debian)", "WEF", "Nginx", "Docker"] }
     ]
   },
   "experience": [
     {
-      "org": "Widefense"
+      "org": "Widefense",
       "role": "Intelligence Analyst / SIEM Engineer",
-      "start": "2024-25",
+      "start": "2024-05",
       "end": null,
       "summary": "Own SIEM tuning, detections, and platform integrations for multi-tenant environments.",
       "highlights": [
@@ -83,11 +43,7 @@
       "year": 2025,
       "url": "https://example.com/wazuh-shuffle",
       "repo": "https://github.com/yourhandle/wazuh-shuffle",
-      "tags": [
-        "SIEM",
-        "SOAR",
-        "Automation"
-      ]
+      "tags": ["SIEM", "SOAR", "Automation"]
     },
     {
       "title": "LogRhythm Parser Pack",
@@ -95,33 +51,16 @@
       "role": "Author",
       "year": 2024,
       "repo": "https://github.com/yourhandle/lr-mpe-rules",
-      "tags": [
-        "Parsing",
-        "Detection",
-        "LogRhythm"
-      ]
+      "tags": ["Parsing", "Detection", "LogRhythm"]
     }
   ],
   "certifications": [
-    {
-      "name": "CompTIA A+",
-      "issuer": "CompTIA",
-      "year": 2024
-    }
+    { "name": "CompTIA A+", "issuer": "CompTIA", "year": 2024 }
   ],
   "education": [
-    {
-      "school": "Universidad Mayor",
-      "degree": "Técnico Universitario en Ciberseguridad",
-      "year": "2026 (in progress)"
-    }
+    { "school": "Universidad Mayor", "degree": "Técnico Universitario en Ciberseguridad", "year": "2026 (in progress)" }
   ],
   "talks": [
-    {
-      "title": "Building a Lean MSSP SIEM",
-      "event": "Local Sec Meetup",
-      "year": 2025,
-      "url": "https://example.com/talk"
-    }
+    { "title": "Building a Lean MSSP SIEM", "event": "Local Sec Meetup", "year": 2025, "url": "https://example.com/talk" }
   ]
 }
