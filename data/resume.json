@@ -18,7 +18,7 @@
       { "name": "Threat Intel", "items": ["MISP", "ZeroFox", "OSINT", "YARA"] },
       { "name": "Vuln Mgmt", "items": ["Qualys VMDR", "Tenable.io", "Tenable.sc"] },
       { "name": "Automation", "items": ["Shuffle", "Python", "Bash", "REST APIs"] },
-      { "name": "Infra", "items": ["Linux (Debian)", "WEF", "Nginx", "Docker"] }
+      { "name": "Infra", "items": ["Linux (Debian)", "WEF", "Nginx", "Docker", "AWS"] }
     ]
   },
   "experience": [
