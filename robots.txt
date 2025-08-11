@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://natecor.github.io/sitemap.xml
