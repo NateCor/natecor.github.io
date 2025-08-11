@@ -1,15 +1,15 @@
 {
   "profile": {
-    "name": "Your Name",
+    "name": "Nathan Cortez",
     "title": "Cybersecurity Analyst | SIEM Engineering | Threat Intelligence",
-    "summary": "Security analyst at an MSSP. SIEM management, detection engineering, and automation. Privacy-first. OSS advocate.",
+    "summary": "Security analyst at Widefense. SIEM management, detection engineering, and automation. Privacy-first. OSS advocate.",
     "location": "Santiago, CL",
-    "email": "you@example.com",
+    "email": "nathancortez@protonmail.com",
     "website": "https://natecor.github.io/",
     "pgp": "https://keys.openpgp.org/vks/v1/by-fingerprint/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "links": {
-      "github": "https://github.com/yourhandle",
-      "linkedin": "https://www.linkedin.com/in/yourhandle/"
+      "github": "https://github.com/natecor",
+      "linkedin": "https://www.linkedin.com/in/nathan-c-b2060b253"
     }
   },
   "skills": {
@@ -63,9 +63,9 @@
   },
   "experience": [
     {
-      "org": "MSSP Name",
+      "org": "Widefense,
       "role": "Intelligence Analyst / SIEM Engineer",
-      "start": "2023-05",
+      "start": "2024-25",
       "end": null,
       "summary": "Own SIEM tuning, detections, and platform integrations for multi-tenant environments.",
       "highlights": [
@@ -104,15 +104,15 @@
   ],
   "certifications": [
     {
-      "name": "CompTIA Network+",
+      "name": "CompTIA A+",
       "issuer": "CompTIA",
-      "year": 2025
+      "year": 2024
     }
   ],
   "education": [
     {
-      "school": "University Name",
-      "degree": "BSc Computer Science",
+      "school": "Universidad Mayor",
+      "degree": "Técnico Universitario en Ciberseguridad",
       "year": "2026 (in progress)"
     }
   ],
