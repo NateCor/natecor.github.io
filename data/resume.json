@@ -9,29 +9,106 @@
     "pgp": "https://keys.openpgp.org/vks/v1/by-fingerprint/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "links": {
       "github": "https://github.com/natecor",
-      "linkedin": "https://www.linkedin.com/in/nathan-c-b2060b253"
+      "linkedin": "https://www.linkedin.com/in/nathan-c-b2060b253/"
     }
   },
   "skills": {
     "categories": [
-      { "name": "SIEM", "items": ["LogRhythm 7.20", "Google SecOps", "Wazuh Cloud", "Sigma", "MITRE ATT&CK"] },
-      { "name": "Threat Intel", "items": ["MISP", "ZeroFox", "OSINT", "YARA"] },
-      { "name": "Vuln Mgmt", "items": ["Qualys VMDR", "Tenable.io", "Tenable.sc"] },
-      { "name": "Automation", "items": ["Shuffle", "Python", "Bash", "REST APIs"] },
-      { "name": "Infra", "items": ["Linux (Debian)", "WEF", "Nginx", "Docker", "AWS"] }
+      {
+        "name": "SIEM",
+        "items": [
+          "LogRhythm 7.20",
+          "Google SecOps Chronicle",
+          "Wazuh Cloud",
+          "MITRE ATT&CK",
+          "Sigma"
+        ]
+      },
+      {
+        "name": "Threat Intel & DRP",
+        "items": [
+          "MISP",
+          "ZeroFox",
+          "OSINT"
+        ]
+      },
+      {
+        "name": "Vulnerability Mgmt",
+        "items": [
+          "Qualys VMDR",
+          "Tenable.io",
+          "Tenable.sc",
+          "Patch Management"
+        ]
+      },
+      {
+        "name": "Endpoint/XDR & NAC/SSE",
+        "items": [
+          "Trellix ePO (SaaS & On-Prem)",
+          "Forescout",
+          "Skyhigh"
+        ]
+      },
+      {
+        "name": "Networking & Monitoring",
+        "items": [
+          "Security Onion",
+          "WEF",
+          "Nginx"
+        ]
+      },
+      {
+        "name": "Automation",
+        "items": [
+          "Shuffle",
+          "Python",
+          "Bash",
+          "REST APIs"
+        ]
+      },
+      {
+        "name": "Platforms",
+        "items": [
+          "Linux (Debian)",
+          "Docker",
+          "Cloud fundamentals"
+        ]
+      },
+      {
+        "name": "General",
+        "items": [
+          "Backend fundamentals",
+          "Frontend fundamentals",
+          "Basic Data Science",
+          "Networks",
+          "Hardware maintenance"
+        ]
+      }
     ]
   },
   "experience": [
     {
       "org": "Widefense",
-      "role": "Intelligence Analyst / SIEM Engineer",
-      "start": "2024-05",
+      "role": "Cybersecurity Analyst",
+      "start": "2024-08",
       "end": null,
-      "summary": "Own SIEM tuning, detections, and platform integrations for multi-tenant environments.",
+      "summary": "Administration and optimization of security platforms including SIEM; development and resolution of security procedures; incident management.",
       "highlights": [
-        "Cut false positives 45% via rule tuning and enrichment",
-        "Built Shuffle playbooks for ransomware containment and IOC takedown",
-        "Integrated Qualys/Tenable findings into detection pipeline"
+        "LogRhythm SIEM tuning and custom parsing to reduce false positives",
+        "Detection engineering aligned to CIS Controls and MITRE ATT&CK",
+        "Automation with Shuffle for containment and takedowns",
+        "Integration of vulnerability data from Qualys/Tenable"
+      ]
+    },
+    {
+      "org": "Widefense",
+      "role": "Continuous Management Intern",
+      "start": "2024-05",
+      "end": "2024-08",
+      "summary": "Internship focused on SIEM and operational support.",
+      "highlights": [
+        "Supported SIEM administration and alert triage",
+        "Learned LogRhythm administration and content development"
       ]
     }
   ],
@@ -43,7 +120,11 @@
       "year": 2025,
       "url": "https://example.com/wazuh-shuffle",
       "repo": "https://github.com/yourhandle/wazuh-shuffle",
-      "tags": ["SIEM", "SOAR", "Automation"]
+      "tags": [
+        "SIEM",
+        "SOAR",
+        "Automation"
+      ]
     },
     {
       "title": "LogRhythm Parser Pack",
@@ -51,16 +132,223 @@
       "role": "Author",
       "year": 2024,
       "repo": "https://github.com/yourhandle/lr-mpe-rules",
-      "tags": ["Parsing", "Detection", "LogRhythm"]
+      "tags": [
+        "Parsing",
+        "Detection",
+        "LogRhythm"
+      ]
     }
   ],
   "certifications": [
-    { "name": "CompTIA A+", "issuer": "CompTIA", "year": 2024 }
+    {
+      "name": "ZeroFox Power User, Intelligence, Disruption & Collections",
+      "issuer": "ZeroFox",
+      "year": 2025
+    },
+    {
+      "name": "Curso Universitario en Ciberseguridad (CUC)",
+      "issuer": "Red Internacional de Ciberseguridad CyberPlatform",
+      "year": 2024
+    },
+    {
+      "name": "Tenable Service Delivery: Tenable.sc & Tenable.io",
+      "issuer": "Tenable",
+      "year": "2024–2025"
+    },
+    {
+      "name": "Tenable MSSP Practitioner",
+      "issuer": "Tenable",
+      "year": 2025
+    },
+    {
+      "name": "Forescout Accredited Engineer",
+      "issuer": "Forescout",
+      "year": 2024
+    },
+    {
+      "name": "Trellix ePO Certified Architect",
+      "issuer": "Trellix",
+      "year": 2024
+    },
+    {
+      "name": "Trellix ePO Deep Dive",
+      "issuer": "Trellix",
+      "year": 2024
+    },
+    {
+      "name": "Trellix ePO Orchestrator On-Prem 5.10 Essentials",
+      "issuer": "Trellix",
+      "year": 2024
+    },
+    {
+      "name": "Trellix ePO Product Overview",
+      "issuer": "Trellix",
+      "year": 2024
+    },
+    {
+      "name": "Trellix ePO SaaS Certificate",
+      "issuer": "Trellix",
+      "year": 2024
+    },
+    {
+      "name": "Trellix ePO Service Provider",
+      "issuer": "Trellix",
+      "year": 2024
+    },
+    {
+      "name": "Trellix ePO Collateral and Resources",
+      "issuer": "Trellix",
+      "year": 2024
+    },
+    {
+      "name": "LogRhythm Platform Administrator (LRPA)",
+      "issuer": "LogRhythm",
+      "year": 2024
+    },
+    {
+      "name": "LogRhythm 301 Administration Fundamentals",
+      "issuer": "LogRhythm",
+      "year": 2024
+    },
+    {
+      "name": "LogRhythm 302 AI Engine Fundamentals",
+      "issuer": "LogRhythm",
+      "year": 2024
+    },
+    {
+      "name": "LogRhythm Support Engineer Written Exam",
+      "issuer": "LogRhythm",
+      "year": 2024
+    },
+    {
+      "name": "Intro to LogRhythm — Administrators and Analysts",
+      "issuer": "LogRhythm",
+      "year": 2024
+    },
+    {
+      "name": "Intro to SIEM",
+      "issuer": "LogRhythm",
+      "year": 2024
+    },
+    {
+      "name": "CyberOps Associate",
+      "issuer": "Cisco",
+      "year": 2024
+    },
+    {
+      "name": "Networking Essentials",
+      "issuer": "Cisco Networking Academy",
+      "year": 2024
+    },
+    {
+      "name": "Introduction to IoT",
+      "issuer": "Cisco Networking Academy",
+      "year": 2024
+    },
+    {
+      "name": "Cybersecurity Essentials",
+      "issuer": "Cisco",
+      "year": 2024
+    },
+    {
+      "name": "Introduction to Cybersecurity",
+      "issuer": "Cisco",
+      "year": 2024
+    },
+    {
+      "name": "Qualys Cloud Agent",
+      "issuer": "Qualys",
+      "year": 2024
+    },
+    {
+      "name": "Qualys Administration",
+      "issuer": "Qualys",
+      "year": 2024
+    },
+    {
+      "name": "Qualys Patch Management",
+      "issuer": "Qualys",
+      "year": "2024–2026"
+    },
+    {
+      "name": "Qualys Scanning Strategies and Best Practices Diploma",
+      "issuer": "Qualys",
+      "year": 2024
+    },
+    {
+      "name": "Vulnerability Management Detection and Response",
+      "issuer": "Qualys",
+      "year": 2024
+    },
+    {
+      "name": "Diplomado en Diseño y Programación Web",
+      "issuer": "Fundación Telefónica Movistar Chile",
+      "year": 2023
+    },
+    {
+      "name": "CompTIA A+",
+      "issuer": "CompTIA",
+      "year": 2024
+    },
+    {
+      "name": "CompTIA IT Fundamentals (ITF+)",
+      "issuer": "CompTIA",
+      "year": 2023
+    },
+    {
+      "name": "Python for Data Science and AI",
+      "issuer": "Coursera",
+      "year": 2022
+    },
+    {
+      "name": "Web Development with HTML, CSS, JavaScript Essentials",
+      "issuer": "Coursera",
+      "year": 2022
+    },
+    {
+      "name": "Developing Cloud Native Applications",
+      "issuer": "Coursera",
+      "year": 2022
+    },
+    {
+      "name": "Introduction to Cloud Computing",
+      "issuer": "Coursera",
+      "year": 2022
+    },
+    {
+      "name": "Workshop: Compra y Uso de Bitcoin",
+      "issuer": "Asociación Chilena de Criptotecnologías",
+      "year": 2021
+    },
+    {
+      "name": "Fundamentos de Seguridad de la Información",
+      "issuer": "Capacitación Usach",
+      "year": 2021
+    }
   ],
   "education": [
-    { "school": "Universidad Mayor", "degree": "Técnico Universitario en Ciberseguridad", "year": "2026 (in progress)" }
+    {
+      "school": "Universidad Mayor",
+      "degree": "Técnico Universitario en Ciberseguridad",
+      "year": "2024–2026"
+    },
+    {
+      "school": "Pontificia Universidad Católica de Chile — Interdisciplinario College CS",
+      "degree": "Bachelor’s coursework",
+      "year": "2023-03–2023-12"
+    },
+    {
+      "school": "Centro Educacional Profesor Guillermo González Heinrich",
+      "degree": "High School Diploma, Científico Humanista",
+      "year": "2018–2021"
+    }
   ],
   "talks": [
-    { "title": "Building a Lean MSSP SIEM", "event": "Local Sec Meetup", "year": 2025, "url": "https://example.com/talk" }
+    {
+      "title": "Building a Lean MSSP SIEM",
+      "event": "Local Sec Meetup",
+      "year": 2025,
+      "url": "https://example.com/talk"
+    }
   ]
 }
