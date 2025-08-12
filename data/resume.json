@@ -21,7 +21,8 @@
           "Google SecOps Chronicle",
           "Wazuh Cloud",
           "MITRE ATT&CK",
-          "Sigma"
+          "Sigma",
+          "regex"
         ]
       },
       {
@@ -69,9 +70,10 @@
       {
         "name": "Platforms",
         "items": [
-          "Linux (Debian)",
+          "Linux (Debian, Ubuntu)",
           "Docker",
-          "Cloud fundamentals"
+          "Cloud fundamentals",
+          "AWS"
         ]
       },
       {
@@ -130,7 +132,7 @@
       "title": "LogRhythm Parser Pack",
       "description": "Custom MPE rules for DNSFilter and UniFi logs.",
       "role": "Author",
-      "year": 2024,
+      "year": 2025,
       "repo": "https://github.com/yourhandle/lr-mpe-rules",
       "tags": [
         "Parsing",
@@ -345,9 +347,9 @@
   ],
   "talks": [
     {
-      "title": "Building a Lean MSSP SIEM",
-      "event": "Local Sec Meetup",
-      "year": 2025,
+      "title": "From Home Lab to MSSP: Building a Scalable OSS Security Stack",
+      "event": "Soon",
+      "year": "Soon",
       "url": "https://example.com/talk"
     }
   ]
