@@ -22,7 +22,7 @@ const data = {
     <span class="section-title">EXPERIENCE</span><br>
     <div class="job-block">
         <strong>Widefense | Cybersecurity Solutions Architect</strong><br>
-        <span class="date">2025 - Present</span><br>
+        <span class="date">Feb 2026 - Present</span><br>
         Providing high-quality cybersecurity solutions for the MSOC service, backed by research and Proofs of Concept (PoC).
         <ul>
             <li>Innovation and automation to scale the service and streamline internal processes.</li>
@@ -34,7 +34,7 @@ const data = {
     </div>
     <div class="job-block">
         <strong>Widefense | Cybersecurity Analyst</strong><br>
-        <span class="date">Aug 2024 - 2025</span><br>
+        <span class="date">Aug 2024 - Feb 2026</span><br>
         Administration and optimization of security platforms (SIEM, VM, XDR).
         <ul>
             <li><strong>SIEM (LogRhythm):</strong> Use case design, false positive reduction, parser development.</li>
