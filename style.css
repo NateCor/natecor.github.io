@@ -372,7 +372,7 @@ input::placeholder {
 }
 
 /* ---------- PRINT / PDF (always the plain view, on white) ----------
-   Calibri 12pt #7F7F7F body, headings 18/15/12pt bold, justified, single spacing.
+   Calibri 12pt black body, headings 18/15/12pt bold, justified, single spacing.
    Carlito is the metric-compatible open-source substitute for Calibri. */
 @media print {
     @page {
@@ -382,7 +382,7 @@ input::placeholder {
     html,
     body {
         background: #fff !important;
-        color: #7f7f7f !important;
+        color: #000 !important;
         height: auto !important;
         overflow: visible !important;
         padding: 0;
@@ -405,7 +405,7 @@ input::placeholder {
     h3 {
         font-family: inherit;
         font-weight: bold;
-        color: #7f7f7f;
+        color: #000;
     }
     .cv-header h1 {
         font-size: 18pt;
@@ -428,11 +428,12 @@ input::placeholder {
     .date,
     .cv-header p,
     .inline-list > *::before {
-        color: #7f7f7f;
+        color: #000;
         font-size: 12pt;
     }
-    a {
-        color: #7f7f7f;
+    a,
+    .cv .cmd {
+        color: #000;
         text-decoration: underline;
     }
     .job-block {
