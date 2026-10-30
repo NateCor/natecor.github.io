@@ -4,7 +4,10 @@
     --text-color: #c9d1d9;
     --accent-color: #58a6ff;
     --success-color: #2ea043;
+    --error-color: #ff5f56;
     --cmd-color: #f0f6fc;
+    --muted-color: #8b949e;
+    --border-color: #30363d;
     --font-stack: 'Consolas', 'Monaco', 'Courier New', monospace;
 }
 
@@ -14,123 +17,202 @@
     padding: 0;
 }
 
-/* Full-viewport layout */
 html,
 body {
-    height: 100%;
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-stack);
-    overflow: hidden; /* page itself never scrolls */
 }
 
+/* ---------- MODE SWITCHING ----------
+   html.js         terminal only
+   html.js.plain   plain view only (#cv)
+   html.no-js      plain view only (no JavaScript, crawlers, link previews) */
+.js:not(.plain) .cv {
+    display: none;
+}
+.no-js .container,
+.plain .container,
+.no-js .cv-nav {
+    display: none;
+}
+
+/* Terminal mode: full viewport, the page itself never scrolls */
+.js:not(.plain),
+.js:not(.plain) body {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Content that only belongs to one of the two views */
+#output .cv-only,
+.cv .term-only {
+    display: none;
+}
+
+/* ---------- TERMINAL ---------- */
 body {
     padding: 20px 10px;
 }
 
-/* Center terminal horizontally, fill viewport vertically */
 .container {
     max-width: 1000px;
     height: calc(100vh - 40px); /* viewport minus body padding */
+    height: calc(100dvh - 40px); /* mobile: ignore the collapsing address bar */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 
-/* Terminal fills the container and never exceeds it */
 .terminal-window {
-    background-color: #0d1117;
-    border: 1px solid #30363d;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-    flex: 1;            /* fill available height */
-    min-height: 0;      /* allow flex children to shrink */
-    overflow: hidden;   /* clip to border-radius */
+    flex: 1;
+    min-height: 0;
+    overflow: hidden; /* clip to border-radius */
 }
 
-/* Fake terminal header */
-header {
+.terminal-window > header {
     background-color: var(--term-bg);
     padding: 10px;
-    border-bottom: 1px solid #30363d;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
 }
 
+.buttons {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
 .buttons span {
     height: 12px;
     width: 12px;
     border-radius: 50%;
-    display: inline-block;
-    margin-right: 8px;
 }
-
-.red {
-    background-color: #ff5f56;
-}
-.yellow {
-    background-color: #ffbd2e;
-}
-.green {
-    background-color: #27c93f;
-}
+.red { background-color: #ff5f56; }
+.yellow { background-color: #ffbd2e; }
+.green { background-color: #27c93f; }
 
 .user {
-    margin-left: auto;
-    font-size: 0.85rem;
     opacity: 0.7;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* MAIN CONTENT – scrollable within the terminal */
+.title-links {
+    margin-left: auto;
+    display: flex;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
 main {
     padding: 20px;
     font-size: 1rem;
     line-height: 1.5;
     flex: 1;
-    min-height: 0;       /* critical: allows flex shrink so scrollbar appears */
-    overflow-y: auto;    /* scroll when content exceeds available space */
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-wrap: anywhere; /* long URLs wrap instead of widening the page */
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) var(--bg-color);
+}
+main::-webkit-scrollbar { width: 10px; }
+main::-webkit-scrollbar-track { background: var(--bg-color); }
+main::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 5px; }
+
+.block + .block {
+    margin-top: 14px;
 }
 
-/* Sections */
+.echo {
+    margin-bottom: 4px;
+}
+
+.error {
+    color: var(--error-color);
+}
+
+/* ---------- SHARED CONTENT STYLES (terminal output and plain view) ---------- */
+h2,
+h3 {
+    font-size: 1rem;
+}
+
 .section-title {
     color: var(--accent-color);
     font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #30363d;
+    margin: 12px 0 10px;
+    border-bottom: 1px solid var(--border-color);
     display: inline-block;
 }
+section > .section-title:first-child {
+    margin-top: 4px;
+}
+.block section + section .section-title {
+    margin-top: 20px;
+}
 
-.job-block,
-.cert-block {
+h3 {
+    color: var(--cmd-color);
+    text-wrap: balance;
+}
+h3 .date {
+    font-weight: normal;
+}
+
+.job-block {
     margin-bottom: 15px;
     padding-left: 10px;
-    border-left: 2px solid #30363d;
+    border-left: 2px solid var(--border-color);
 }
 
 .date {
-    color: #8b949e;
+    color: var(--muted-color);
     font-size: 0.9rem;
 }
 
-/* Lists: the global reset strips ul padding, which put markers on the block border */
+/* The global reset strips ul padding, which put markers on the block border */
 ul {
     padding-left: 22px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px 0;
 }
-
 li {
     margin-bottom: 4px;
 }
 
-.highlight {
-    color: var(--success-color);
-    font-weight: bold;
+/* Dot-separated lists (domain tags, CV header). Each dot sits before its item; the
+   dot that starts a wrapped line falls in the clipped strip on the left, so no
+   line ever starts or ends with a stray separator. */
+.inline-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1.4em;
+    clip-path: inset(0 0 0 1.4em);
+}
+.tags.inline-list {
+    display: inline-flex;
+    vertical-align: top;
+}
+.inline-list > * {
+    position: relative;
+    margin-left: 1.4em;
+    white-space: nowrap;
+}
+.inline-list > *::before {
+    content: '\00b7';
+    position: absolute;
+    left: -0.95em;
+    color: var(--muted-color);
 }
 
 a {
@@ -141,47 +223,243 @@ a:hover {
     text-decoration: underline;
 }
 
-/* INPUT LINE – always pinned at the bottom of the terminal */
+/* Clickable commands look like the old green highlights */
+.cmd {
+    color: var(--success-color);
+    font-weight: bold;
+    font-family: inherit;
+    font-size: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline dotted rgba(46, 160, 67, 0.5);
+    text-underline-offset: 3px;
+}
+.cmd:hover,
+.cmd:focus-visible {
+    text-decoration: underline;
+}
+:focus-visible {
+    outline: 1px dashed var(--accent-color);
+    outline-offset: 2px;
+}
+
+.cmd-bar {
+    line-height: 1.9;
+}
+.block > section + .cmd-bar {
+    margin-top: 14px;
+}
+.cmd-bar .cmd {
+    margin-right: 6px;
+}
+
+.help-list {
+    list-style: none;
+    padding-left: 0;
+}
+.help-list .cmd {
+    display: inline-block;
+    min-width: 13ch;
+    text-align: left;
+}
+.muted {
+    color: var(--muted-color);
+}
+
+/* ---------- INPUT LINE (pinned to the bottom of the terminal) ---------- */
 .input-line {
     background-color: var(--term-bg);
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    border-top: 1px solid #30363d;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    flex-shrink: 0; /* never collapse, always visible */
+    border-top: 1px solid var(--border-color);
+    flex-shrink: 0;
 }
 
 .prompt {
     color: var(--success-color);
     margin-right: 10px;
     font-weight: bold;
+    white-space: nowrap;
+}
+.echo .prompt {
+    margin-right: 0;
 }
 
 input {
     background: transparent;
     border: none;
     color: var(--cmd-color);
+    caret-color: var(--success-color);
     font-family: var(--font-stack);
     font-size: 1rem;
-    flex-grow: 1;
+    flex: 1;
+    min-width: 0; /* without this the input overflows narrow screens and shifts the whole window */
     outline: none;
 }
+input::placeholder {
+    color: var(--muted-color);
+    opacity: 0.6;
+}
 
-/* Terminal output scrollbar */
-main::-webkit-scrollbar {
-    width: 10px;
+/* ---------- PLAIN VIEW (#cv, no-JS fallback) ----------
+   Same colors as the terminal, but a regular sans-serif font for easier reading. */
+.cv {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 10px 14px 40px;
+    line-height: 1.55;
+    overflow-wrap: break-word;
+    font-family: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
-main::-webkit-scrollbar-track {
-    background: var(--bg-color);
+.cv .section-title {
+    font-family: var(--font-stack);
 }
-main::-webkit-scrollbar-thumb {
-    background: #30363d;
-    border-radius: 5px;
+.cv p + p {
+    margin-top: 6px;
 }
-/* Firefox scrollbar */
-main {
-    scrollbar-width: thin;
-    scrollbar-color: #30363d var(--bg-color);
+.cv-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+}
+.cv-nav a {
+    padding: 10px 0; /* bigger tap targets */
+}
+
+.cv-header h1 {
+    font-size: 1.5rem;
+    color: var(--cmd-color);
+}
+.cv-header p {
+    color: var(--muted-color);
+}
+.cv section {
+    margin-top: 26px;
+}
+.cv .cmd {
+    color: var(--accent-color);
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/* ---------- SMALL SCREENS ---------- */
+@media (max-width: 600px) {
+    body {
+        padding: 8px 6px;
+    }
+    .container {
+        height: calc(100vh - 16px);
+        height: calc(100dvh - 16px);
+    }
+    main {
+        padding: 14px;
+        font-size: 0.9rem;
+    }
+    .input-line {
+        padding: 10px 14px;
+    }
+    .prompt-host,
+    .user {
+        display: none; /* the prompt shrinks to "~$" */
+    }
+    input {
+        font-size: 16px; /* 16px stops iOS from zooming in on focus */
+    }
+}
+
+/* ---------- PRINT / PDF (always the plain view, on white) ----------
+   Calibri 12pt #7F7F7F body, headings 18/15/12pt bold, justified, single spacing.
+   Carlito is the metric-compatible open-source substitute for Calibri. */
+@media print {
+    @page {
+        size: A4;
+        margin: 18mm 18mm;
+    }
+    html,
+    body {
+        background: #fff !important;
+        color: #7f7f7f !important;
+        height: auto !important;
+        overflow: visible !important;
+        padding: 0;
+    }
+    .container,
+    .cv-nav {
+        display: none !important;
+    }
+    .cv {
+        display: block !important;
+        max-width: none;
+        padding: 0;
+        font-family: Calibri, Carlito, 'Segoe UI', Arial, sans-serif;
+        font-size: 12pt;
+        line-height: 1.15;
+        text-align: justify;
+    }
+    .cv .section-title,
+    .cv-header h1,
+    h3 {
+        font-family: inherit;
+        font-weight: bold;
+        color: #7f7f7f;
+    }
+    .cv-header h1 {
+        font-size: 18pt;
+    }
+    .cv .section-title {
+        font-size: 15pt;
+        display: block;
+        border-bottom: 1px solid #bfbfbf;
+        margin: 0 0 6pt;
+        padding-bottom: 2pt;
+    }
+    h3 {
+        font-size: 12pt;
+        text-align: left;
+    }
+    .cv-header,
+    .cv-header p {
+        text-align: left;
+    }
+    .date,
+    .cv-header p,
+    .inline-list > *::before {
+        color: #7f7f7f;
+        font-size: 12pt;
+    }
+    a {
+        color: #7f7f7f;
+        text-decoration: underline;
+    }
+    .job-block {
+        border-left: none;
+        padding-left: 0;
+        margin-bottom: 9pt;
+    }
+    h3,
+    .job-block > .date {
+        break-after: avoid;
+    }
+    li {
+        break-inside: avoid;
+    }
+    .cv section {
+        margin-top: 14pt;
+    }
+    .cv p + p {
+        margin-top: 2pt;
+    }
+    ul {
+        margin: 3pt 0;
+    }
+    li {
+        margin-bottom: 2pt;
+    }
+    h2 {
+        break-after: avoid;
+    }
 }

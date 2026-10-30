@@ -1,34 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO: Critical for being found by recruiters -->
+    <script>document.documentElement.className = 'js';</script>
     <title>Nathan Cortez | Cybersecurity Solutions Architect</title>
-    <meta name="description" content="Portfolio of Nathan Cortez Guevara, Cybersecurity Solutions Architect specializing in SIEM, VM, XDR, DLP, and security automation.">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230d1117'/><text x='15' y='70' font-family='monospace' font-size='60' fill='%232ea043'>&gt;_</text></svg>">
+    <meta name="description" content="Nathan Cortez Guevara, Cybersecurity Solutions Architect in Santiago, Chile. Detection engineering, SIEM/SOAR, security automation, and AI agents in the SOC.">
+    <link rel="canonical" href="https://natecor.github.io/">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://natecor.github.io/">
+    <meta property="og:title" content="Nathan Cortez | Cybersecurity Solutions Architect">
+    <meta property="og:description" content="Detection engineering, SIEM/SOAR, security automation, and AI agents in the SOC. Santiago, Chile.">
+    <meta property="og:image" content="https://natecor.github.io/assets/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nathan Cortez Guevara",
+        "jobTitle": "Cybersecurity Solutions Architect",
+        "worksFor": { "@type": "Organization", "name": "Widefense" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Santiago", "addressCountry": "CL" },
+        "url": "https://natecor.github.io/",
+        "sameAs": ["https://www.linkedin.com/in/nathan-c-b2060b253/", "https://github.com/NateCor"]
+    }
+    </script>
 </head>
 <body>
+    <!-- Terminal UI (only shown when JavaScript runs) -->
     <div class="container">
         <div class="terminal-window">
             <header>
-                <div class="buttons">
+                <div class="buttons" aria-hidden="true">
                     <span class="red"></span>
                     <span class="yellow"></span>
                     <span class="green"></span>
                 </div>
-                <div class="user">guest@natecor-portfolio: ~</div>
+                <div class="user">guest@natecor: ~</div>
+                <nav class="title-links" aria-label="Other formats">
+                    <a href="#cv">plain view</a>
+                    <a href="assets/Nathan-Cortez-Guevara-CV.pdf" target="_blank" rel="noopener">pdf</a>
+                </nav>
             </header>
-            <main id="output">
-                <!-- Initial Greeting will be injected by JS -->
-            </main>
+            <main id="output" role="log" aria-live="polite"></main>
             <div class="input-line">
-                <span class="prompt">guest@natecor:~$</span>
-                <input type="text" id="command-input" autofocus autocomplete="off" spellcheck="false">
+                <label for="command-input" class="prompt"><span class="prompt-host">guest@natecor:</span>~$</label>
+                <input type="text" id="command-input" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" placeholder="type a command or click one">
             </div>
         </div>
     </div>
+
+    <!--
+        CV CONTENT: edit here, not in script.js.
+        Every <section data-cmd="..."> becomes a terminal command. The same markup is the
+        plain view (#cv), the no-JavaScript fallback, and the print/PDF layout.
+        After editing, regenerate assets/Nathan-Cortez-Guevara-CV.pdf and update <lastmod> in sitemap.xml.
+    -->
+    <article id="cv" class="cv">
+        <nav class="cv-nav" aria-label="Page">
+            <a href="#" class="to-terminal">&larr; back to terminal</a>
+            <a href="assets/Nathan-Cortez-Guevara-CV.pdf" target="_blank" rel="noopener">download pdf</a>
+        </nav>
+
+        <header class="cv-only cv-header">
+            <h1>Nathan Cortez Guevara</h1>
+            <p class="inline-list"><span>Cybersecurity Solutions Architect</span><span>Santiago, Chile</span></p>
+            <p class="inline-list cv-links">
+                <a href="https://www.linkedin.com/in/nathan-c-b2060b253/">linkedin.com/in/nathan-c-b2060b253</a>
+                <a href="https://github.com/NateCor">github.com/NateCor</a>
+                <a href="https://natecor.github.io/">natecor.github.io</a>
+            </p>
+        </header>
+
+        <section id="about" data-cmd="about">
+            <h2 class="section-title"><span class="term-only">WHOAMI</span><span class="cv-only">PROFILE</span></h2>
+            <p class="term-only"><strong>Name:</strong> Nathan Cortez Guevara</p>
+            <p class="term-only"><strong>Role:</strong> Cybersecurity Solutions Architect</p>
+            <p class="term-only"><strong>Location:</strong> Santiago, Chile</p>
+            <p><strong class="term-only">Summary: </strong>Solutions architect for managed security operations. I design the detection layer end to end: use cases, correlation, automation, and the platforms that run them. Current focus: putting AI agents into the SOC's operational loop, with PoC-backed decisions before anything reaches production.</p>
+            <p><strong>Domain:</strong> <span class="tags inline-list"><span>SIEM</span> <span>SOAR</span> <span>XDR</span> <span>VM</span> <span>NAC</span> <span>SSE</span> <span>DLP</span> <span>CTI</span></span></p>
+        </section>
+
+        <section id="experience" data-cmd="experience">
+            <h2 class="section-title">EXPERIENCE</h2>
+            <div class="job-block">
+                <h3>Widefense | Cybersecurity Solutions Architect</h3>
+                <p class="date">Feb 2026 - Present</p>
+                <p>Technical lead for MSOC service architecture: detection engineering, automation, PoC research, and platform lifecycle across the SIEM/SOAR estate.</p>
+                <ul>
+                    <li><strong>Detection engineering:</strong> translated 560 LogRhythm AIE rules into a structured use case matrix with MITRE ATT&amp;CK mapping and CIS Controls alignment, enabling cross-platform comparison (LogRhythm, Sentinel, Splunk, QRadar, Wazuh).</li>
+                    <li><strong>Agentic AI in the SOC:</strong> I manage a work-sanctioned AI agent project inside the MSOC: a customized SOC agent deployed into the service's operational loop (alert triage, case enrichment, IR support), plus a dedicated architecture workspace with detection-engineering records, automation specs, and runbooks as procedural memory.</li>
+                    <li><strong>Cloud security:</strong> Microsoft Sentinel and Defender for Cloud administration: analytics rules, automation playbooks, advanced hunting (KQL), incident resolution, IOC support.</li>
+                    <li><strong>Automation:</strong> SOAR playbook design and implementation to scale the service and streamline internal processes.</li>
+                    <li>Cost optimization and audit/compliance documentation for clients and regulators.</li>
+                </ul>
+            </div>
+            <div class="job-block">
+                <h3>Widefense | Cybersecurity Analyst</h3>
+                <p class="date">Aug 2024 - Feb 2026</p>
+                <p>Administration and optimization of security platforms (SIEM, VM, XDR).</p>
+                <ul>
+                    <li><strong>SIEM (LogRhythm):</strong> Use case design, false positive reduction, parser development.</li>
+                    <li><strong>VM (Qualys/Tenable):</strong> Risk-based prioritization, remediation tracking.</li>
+                    <li><strong>Endpoints (Trellix):</strong> Policy orchestration and hardening.</li>
+                    <li><strong>DRP (ZeroFox):</strong> Brand monitoring and takedowns.</li>
+                </ul>
+            </div>
+            <div class="job-block">
+                <h3>Widefense | Continuous Management Intern</h3>
+                <p class="date">May 2024 - Aug 2024</p>
+                <p>Hands-on experience with LogRhythm and SIEM management.</p>
+            </div>
+        </section>
+
+        <section id="projects" data-cmd="projects">
+            <h2 class="section-title">PROJECTS</h2>
+            <div class="job-block">
+                <h3>Hermes Agent: Autonomous AI Assistant Platform <span class="date">(May 2026 - Present)</span></h3>
+                <p>A self-hosted AI assistant that runs 24/7 on my own Linux infrastructure, built from open-source components and funded by me. It uses the same architectural patterns as the SOC agent I manage at Widefense, applied to my own workflows instead of a corporate SOC.</p>
+                <ul>
+                    <li>Orchestrates parallel subagent workflows for research, code review, and reconnaissance tasks.</li>
+                    <li>Automates browser interaction via Chrome DevTools Protocol (CDP) for OSINT and passive reconnaissance.</li>
+                    <li>Long-term semantic memory across sessions; scheduled cron jobs for automated threat-intel briefings and alerting.</li>
+                    <li>Integrates with external APIs: Microsoft Graph, GitHub, and security tooling.</li>
+                    <li>Proven SOC API orchestration: case creation, workflow automation, and log analysis across Wazuh, Shuffle, TheHive, and MISP.</li>
+                    <li>Runs this website's contact inbox: it reads and triages incoming mail and drafts replies for my review (see <a href="#contact" class="cmd" data-cmd="contact">contact</a>).</li>
+                </ul>
+            </div>
+            <div class="job-block">
+                <h3>conteo2027: FEUC Live Vote Counting <span class="date">(Feb 2026 - Present)</span></h3>
+                <p>Real-time vote count visualization for the PUC student federation (FEUC) elections, in collaboration with the student journalism body El Puclítico. Complete modernization of a static dashboard originally built for 2017.</p>
+                <p><a href="https://github.com/NateCor/conteo2027" target="_blank" rel="noopener">github.com/NateCor/conteo2027</a></p>
+            </div>
+            <div class="job-block">
+                <h3>LogRhythm AIE Alarm Monitor <span class="date">(2026)</span></h3>
+                <p>Python CLI that pulls AI Engine alarms from the LogRhythm API and filters by Risk-Based Priority. Paginated, with config via JSON/env/CLI and JSON/CSV exports.</p>
+                <p><a href="https://github.com/NateCor/logrhythm-aie-alarm-monitor" target="_blank" rel="noopener">github.com/NateCor/logrhythm-aie-alarm-monitor</a></p>
+            </div>
+            <div class="job-block">
+                <h3>LogRhythm Agent Heartbeat Monitor <span class="date">(2026)</span></h3>
+                <p>Daemon that polls the LogRhythm Admin API to detect stale System Monitor agent heartbeats, with JSON-lines logging and daily summaries.</p>
+                <p><a href="https://github.com/NateCor/logrhythm-system-monitor-agent-heartbeat" target="_blank" rel="noopener">github.com/NateCor/logrhythm-system-monitor-agent-heartbeat</a></p>
+            </div>
+            <div class="job-block">
+                <h3>Full-OSS Cybersecurity Ecosystem Lab (OSSSOC) <span class="date">(2026 - Present)</span></h3>
+                <p>First minimum viable product of a broader open-source SOC ecosystem I designed: Zeek network detection (DNS/HTTP/conn) plus Sysmon and Windows Security telemetry feed Wazuh (SIEM), which routes alerts through Shuffle (SOAR) into TheHive (incident response), with MISP for threat intelligence. Fully automated alert-to-case pipeline, orchestrated end to end via API.</p>
+                <p class="date">Planned expansion: IT inventory, vulnerability management, and red teaming / security validation components.</p>
+            </div>
+            <div class="job-block">
+                <h3>Writing</h3>
+                <p>"Gestión de vulnerabilidades: priorizar importa más que solo detectar" (Vulnerability Management: prioritizing matters more than just detecting). Widefense blog, May 2026.</p>
+                <p><a href="https://widefense.com/blog/gestion-de-vulnerabilidades-priorizar-importa-mas-que-solo-detectar" target="_blank" rel="noopener">widefense.com/blog</a></p>
+            </div>
+        </section>
+
+        <section id="skills" data-cmd="skills">
+            <h2 class="section-title">SKILLS &amp; STACK</h2>
+            <p><strong>SIEM/SOAR:</strong> LogRhythm (Admin/Analyst), Microsoft Sentinel, Wazuh (cloud + on-prem), Shuffle SOAR, TheHive.</p>
+            <p><strong>Platforms:</strong> Trellix ePO (SaaS/On-Prem), Qualys VMDR, Tenable.io/.sc, Security Onion, Forescout (NAC), Skyhigh (SSE), ZeroFox (DRP), Safetica DLP, MISP, eThalamus.</p>
+            <p><strong>Technical:</strong> Linux, Cloud (AWS/Azure), Python (API integrations, automation, data analysis), KQL, JS/HTML/CSS, Networking.</p>
+            <p><strong>Core Competencies:</strong> Solutions Architecture, Detection Engineering, Threat Intelligence, Vulnerability Management, Incident Response, MITRE ATT&amp;CK, CIS Controls, PoC Research.</p>
+        </section>
+
+        <section id="education" data-cmd="education">
+            <h2 class="section-title">EDUCATION</h2>
+            <div class="job-block">
+                <h3>Universidad Mayor</h3>
+                <p>Técnico Universitario en Ciberseguridad (2024 - 2026). Graduated 2026.</p>
+            </div>
+            <div class="job-block">
+                <h3>Pontificia Universidad Católica de Chile</h3>
+                <p>College UC, interdisciplinary program with a computer science focus. One year completed (2023).</p>
+            </div>
+        </section>
+
+        <section id="certs" data-cmd="certs">
+            <h2 class="section-title">CERTIFICATIONS (Selected)</h2>
+            <ul>
+                <li><strong>Safetica:</strong> DLP Certified (2025)</li>
+                <li><strong>ZeroFox:</strong> Power User, Intelligence, Disruption &amp; Collections (2025)</li>
+                <li><strong>Tenable:</strong> MSSP Practitioner, Service Delivery (2024-25)</li>
+                <li><strong>Forescout:</strong> Accredited Engineer (2024)</li>
+                <li><strong>Trellix:</strong> ePO Certified Architect, SaaS Certificate (2024)</li>
+                <li><strong>LogRhythm:</strong> Platform Administrator (LRPA), Analyst, Support Engineer (2024)</li>
+                <li><strong>Cisco:</strong> CyberOps Associate, CCNA1, Networking Essentials, Intro to IoT (2024)</li>
+                <li><strong>CompTIA:</strong> A+, ITF+ (2023-2024)</li>
+                <li><strong>Qualys:</strong> VMDR, Cloud Agent, Patch Management (2024)</li>
+                <li><strong>Red Internacional de Ciberseguridad:</strong> Curso Universitario en Ciberseguridad, CUC 2024, 290 hrs (2025)</li>
+            </ul>
+        </section>
+
+        <section id="contact" data-cmd="contact">
+            <h2 class="section-title">CONTACT</h2>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nathan-c-b2060b253/" target="_blank" rel="noopener">linkedin.com/in/nathan-c-b2060b253</a> <span class="date">(reaches me directly)</span></p>
+            <p><strong>Email:</strong> <a href="mailto:nc-hermes-assistant@agentmail.to">nc-hermes-assistant@agentmail.to</a></p>
+            <p class="date">This inbox is run by Hermes, my self-hosted AI assistant. It reads and triages every message and drafts the reply. I review each reply before it goes out.</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/NateCor" target="_blank" rel="noopener">github.com/NateCor</a></p>
+        </section>
+    </article>
+
     <script src="script.js"></script>
 </body>
 </html>
