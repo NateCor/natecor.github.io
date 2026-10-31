@@ -261,7 +261,7 @@ a:hover {
 }
 .help-list .cmd {
     display: inline-block;
-    min-width: 13ch;
+    min-width: 16ch; /* fits "certificaciones" */
     text-align: left;
 }
 .muted {
@@ -462,5 +462,11 @@ input::placeholder {
     }
     h2 {
         break-after: avoid;
+    }
+    /* short sections stay on one page instead of leaving one line behind */
+    #skills,
+    #education,
+    #contact {
+        break-inside: avoid;
     }
 }
